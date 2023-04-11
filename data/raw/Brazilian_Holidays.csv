@@ -1,0 +1,41 @@
+Type,State,City_Lower,Holiday_Date,English_Name,Portuguese_Name
+National,All,all,1/1/2023,New Year's Day,Ano Novo / Confraternização Universal
+National,All,all,4/21/2023,Tiradentes' Day,Dia de Tiradentes
+National,All,all,5/1/2023,Labour Day,Dia do Trabalhador / Dia do Trabalho
+National,All,all,9/7/2023,Independence Day,Dia da Independência
+National,All,all,10/12/2023,Our Lady of Aparecida,Nossa Senhora Aparecida
+National,All,all,11/2/2023,All Souls' Day,Dia de Finados
+National,All,all,11/15/2023,Republic Proclamation Day,Proclamação da República
+National,All,all,12/25/2023,Christmas,Natal
+National,All,all,6/12/2023, St. Valentine's Day,Dia dos Namorados
+National,All,all,6/13/2023,Festas Juninas - Santo Antônio,Festas Juninas - Santo Antônio
+National,All,all,6/24/2023,Festas Juninas - São João ,Festas Juninas - São João 
+National,All,all,6/29/2023,Festas Juninas - São Pedro,Festas Juninas - São Pedro
+City,PA,belém,1/12/2023,Founding of Belém,
+City,PE,rio de janeiro,1/20/2023,Saint Sebastian ,São Sebastião
+City,PE,são vicente,1/22/2023,"Founding of the first city in Brazil, São Vicente",
+City,PE,são paulo,1/25/2023,Founding of São Paulo ,Aniversário de São Paulo
+City,PE,santos,1/26/2023,Founding of Santos ,Aniversario de Santos
+City,DF,brasília,4/21/2023,Founding of Brasilia,Aniversário de Brasília
+State,RJ,all,4/23/2023,Saint George,São Jorge
+State,BA,all,7/2/2023,Bahia Independence Day,Bahia Independence Day
+State,SE,all,7/8/2023,Sergipe Political Emancipation Day,Sergipe Political Emancipation Day
+State,SP,all,7/9/2023,Constitutionalist Revolution ,Revolução Constitucionalista
+City,MG,belo horizonte,8/15/2023,Our Lady of the Good Voyage,Nossa Senhora da Boa Viagem
+City,SP,campo grande,8/26/2023,Emancipation of the city of Campo Grande,
+City,MG,curitiba,9/8/2023,Our Lady of the Light in the Pine,Nossa Senhora da Luz dos Pinhais
+State,RS,all,9/20/2023,Farroupilha's Revolution ,Revolução Farroupilha
+State,MS,all,10/11/2023,Creation of the State of Mato Grosso do Sul,
+State,RN,all,10/3/2023,Uruaçú and Cunhaú Martyrs Day,
+City,MG,goiânia,10/24/2023,Founding of Goiânia,
+City,PE,são carlos,11/4/2023,Founding of São Carlos,
+City,PE,são paulo,11/20/2023,Black Awareness Day,Zumbi dos Palmares
+City,PE,rio de janeiro,11/20/2023,Black Awareness Day,Zumbi dos Palmares
+City,SP,nantal,11/21/2023,Our Lady of Apresentação,Nossa Senhora da Apresentação
+State,DF,all,11/30/2023,Evangelical Day ,Dia do Evangélico
+State,PE,all,12/8/2023,Our Lady of Conceição,
+City,MG,belo horizonte,12/8/2023,Our Lady of Conceição,
+City,MG,dourados,12/8/2023,Our Lady of Conceição,
+City,PE,santa maria,12/8/2023,Our Lady of Conceição,
+City,RS,são leopoldo,12/8/2023,Our Lady of Conceição,
+State,PR,all,12/19/2023,Emancipation of the Province of Paraná,
