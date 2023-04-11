@@ -1,21 +1,48 @@
-hp-forecasting-delivery
+# Predicting How Long A Delivery Will Take
 ==============================
 
-We'll forecast inventory times for an ecommerce company in Brazil.
+In this project, we develop a regression model to predict how long it'll take for an order to be delivered for using the Olist Ecommerce Dataset available on Kaggle. 
+
+# Summary
+* [👉 Original Kaggle Dataset 🔗](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/)
+* [👉 Polars 🔗](https://www.pola.rs/)
+
+For this project, we decided to push the limits of data processing.
+
+Using the Polars library, in combination with Pandas, we were able to clean, transform, join, and reshape 8 files containing anywhere from **[20 to 100K records]**  in less than 5-6 min. 
+
+Leveraging the Power of Z BY HP to make your data science work **_🤯mindblowingly🤯_ fast**.
+
+_(And decreasing the amount of time staring at the screen waiting for your training job to finish.⏳)_
+
+# Instructions
+1. Clone this Git repository using the following command: `git clone https://github.com/MMBazel/Kaggle-Brazilian-Ecommerce-Prediction.git`
+1. Using the terminal or command prompt, `cd` into `Kaggle-Brazilian-Ecommerce-Prediction`
+1. Check if you have Python installed on your machine by typing `python --version` in your terminal or command prompt window. If Python is not installed, download and install Python from the official website.
+1. Create a virtual environment for the project using the following command:
+    * `python -m venv <YOUR_ENV_NAME>`
+1. Activate the virtual environment using the following command:
+    * On Windows: 
+        * If you're using command line: `<YOUR_ENV_NAME>\Scripts\activate.bat`
+        * If you're using PowerShell: `<YOUR_ENV_NAME>\Scripts\Activate.ps1`
+    * On Linux/Mac: source `<YOUR_ENV_NAME>/bin/activate`
+1. Install the required packages using pip by running the following command:
+    * `pip install -r requirements.txt`
+1. Manually (or programatically) unzip the different data sources in `/data/raw/` and `/data/backup/`.
+1. Make sure you're in the root folder. In your terminal run the command:
+    * `python3 src/main_script.py`
+1. If the program has run successfully, a streamlit dashboard should open in a browser window.
+1. When you're finished, hit `Ctrl+C` to exit streamlit. 
+    
+    
 
 Project Organization
 ------------
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+    │   ├── raw       <- Data needed for the pipeline. Make sure everything has been unzipped. 
+    │   └── backup            <- Backup files for the Streamlit dashboard. Makesure they're unzipped. 
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
@@ -23,35 +50,11 @@ Project Organization
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
     ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
     │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
-
---------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+    │   └── main_script.py  <- The only script that needs to be run with `python3 src/main_script.py`.
+    │                          Make sure you're in the right folder. 
+    ├── dashboard.py          <- Script for the Streamlit dashboard.
