@@ -34,10 +34,9 @@ _(And decreasing the amount of time staring at the screen waiting for your train
 1. If the program has run successfully, a streamlit dashboard should open in a browser window.
 1. When you're finished, hit `Ctrl+C` to exit streamlit. 
     
-    
+------------  
 
 Project Organization
-------------
 
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
@@ -58,3 +57,23 @@ Project Organization
     │   └── main_script.py  <- The only script that needs to be run with `python3 src/main_script.py`.
     │                          Make sure you're in the right folder. 
     ├── dashboard.py          <- Script for the Streamlit dashboard.
+    
+------------
+# Running The Script
+## Video
+    * Watch my screenshare of the script running here:
+    
+## Screenshots
+![plot](./images/brazilian_ecommerce_running_script_1.png)
+![plot](./images/brazilian_ecommcer_running_script_2.png)
+------------
+# Running The Script
+## Video
+    * Watch my screenshare of the script running here:
+    
+## Screenshots
+![plot](./images/brazilian_ecommcer_dash_1.png)
+![plot](./images/brazilian_ecommcer_dash_2.png)
+![plot](./images/brazilian_ecommerce_dash_3.png)
+
+
