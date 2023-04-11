@@ -1,4 +1,4 @@
-# Predicting How Long A Delivery Will Take
+# 🛍️🌐 Predicting Delivery Times Using A Real, Commercial Brazilian E-Commerce Dataset 🇧🇷💰
 ==============================
 
 In this project, we develop a regression model to predict how long it'll take for an order to be delivered for using the Olist Ecommerce Dataset available on Kaggle. 
@@ -60,16 +60,18 @@ Project Organization
     
 ------------
 # Running The Script
-## Video
-    * Watch my screenshare of the script running here:
+## 📹 Video 📹
+   * 👉 Watch my screenshare of the Streamlit dashboard running here:[`YOUTOUBE VIDEO HERE: Brazilian Ecommerce: Running The Script - Part 1`](https://youtu.be/wSyZj8goszQ)
+   * 👉 Watch my screenshare of the Streamlit dashboard running here:[`YOUTOUBE VIDEO HERE: Brazilian Ecommerce: Running The Script - Part 2`](https://youtu.be/Zu6l_GHz_S4)
     
 ## Screenshots
 ![plot](./images/brazilian_ecommerce_running_script_1.png)
 ![plot](./images/brazilian_ecommcer_running_script_2.png)
+
 ------------
 # Running The Script
-## Video
-    * Watch my screenshare of the script running here:
+## 📹 Video 📹
+  * 👉 Watch my screenshare of the Streamlit dashboard running here:[`YOUTOUBE VIDEO HERE: Dashboard - Tour of Brazilian Ecommerce Prediction Streamlit Dashboard`](https://youtu.be/eGr4MxSCsrA)
     
 ## Screenshots
 ![plot](./images/brazilian_ecommcer_dash_1.png)
