@@ -15,6 +15,8 @@ Leveraging the Power of Z BY HP to make your data science work **_🤯mindblowin
 
 _(And decreasing the amount of time staring at the screen waiting for your training job to finish.⏳)_
 
+------------  
+
 # Instructions
 1. Clone this Git repository using the following command: `git clone https://github.com/MMBazel/Kaggle-Brazilian-Ecommerce-Prediction.git`
 1. Using the terminal or command prompt, `cd` into `Kaggle-Brazilian-Ecommerce-Prediction`
@@ -36,7 +38,7 @@ _(And decreasing the amount of time staring at the screen waiting for your train
     
 ------------  
 
-Project Organization
+# Project Organization
 
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
@@ -69,7 +71,7 @@ Project Organization
 ![plot](./images/brazilian_ecommcer_running_script_2.png)
 
 ------------
-# Running The Script
+# Playing With The Dashboard
 ## 📹 Video 📹
   * 👉 Watch my screenshare of the Streamlit dashboard running here:[`YOUTOUBE VIDEO HERE: Dashboard - Tour of Brazilian Ecommerce Prediction Streamlit Dashboard`](https://youtu.be/eGr4MxSCsrA)
     
