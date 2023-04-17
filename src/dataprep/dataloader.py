@@ -48,10 +48,6 @@ def read_files(full_path, dataset_dict):
         f"{full_path}/data/raw/Brazilian_Holidays.csv"
     ).collect()
 
-    brazilian_cities_population_df = pl.scan_csv(
-        f"{full_path}/data/raw/Population_Brazilian_Cities_V2.csv"
-    ).collect()
-
     return (
         customers_df,
         sellers_df,
@@ -60,5 +56,4 @@ def read_files(full_path, dataset_dict):
         orders_df,
         payments_df,
         brazilian_holidays_df,
-        brazilian_cities_population_df,
     )

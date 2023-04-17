@@ -1,36 +1,12 @@
 # Structure of this script:
-# Create a global performance dictionary (so all steps are logged)
-# Provide arguments when running python script
-# Every run gets added, along with the arguments provided (ex: different CPU setups)
 
-# This script should
-# 1. Grab the full path of where the program is being run
-
-
-# 2. Run the following pipelines
-#  a. Dataloader & prepper
-#   i. Read files
-#   ii. Unzip files
-#   iii. Preprocess files (including casting datatypes)
-
-
-#  b. Featurization
-#   i. Create features
-#   ii. Process holiday features
-#   iii. Create SQL context
-#   iv. Create customer holiday features
-#   v. Create labels
-
-
-#  c. Training
-#   i. Create training & test sets
-#   ii. Train model
-#   iii. Pickle model
-
-
+import os
 import sys
 import getopt
 from datetime import datetime
+
+from dataprep import dataloader
+import featurization.create_features as cf
 
 
 def specify_CPU_run(argv):
@@ -69,8 +45,69 @@ def specify_CPU_run(argv):
         print("current datetime:", current_datetime)
         print("print:", arg_print)
 
-    return arg_print
+    return arg_computer, arg_user, arg_version, arg_print
+
+
+# Every run gets added, along with the arguments provided (ex: different CPU setups)
+
+# This script should
+# 1. Grab the full path of where the program is being run
+
+
+# 2. Run the following pipelines
+#  a. Dataloader & prepper
+#   i. Read files
+#   ii. Unzip files
+#   iii. Preprocess files (including casting datatypes)
+
+
+#  b. Featurization
+#   i. Create features
+#   ii. Process holiday features
+#   iii. Create SQL context
+#   iv. Create customer holiday features
+#   v. Create labels
+
+
+#  c. Training
+#   i. Create training & test sets
+#   ii. Train model
+#   iii. Pickle model
+
+
+def main(arg_computer, arg_user, arg_version, arg_print):
+    # Intialize global performance dictionary to collect stats of pipeline
+    # Create a global performance dictionary (so all steps are logged)
+
+    global performance_dict
+    performance_dict = {}
+
+    # Get the full path of where the program is being run
+    full_path = os.getcwd()
+
+    # Dataloader & prepper
+    (
+        customers_df,
+        sellers_df,
+        ord_items_df,
+        products_df,
+        orders_df,
+        payments_df,
+        brazilian_holidays_df,
+    ) = dataloader(full_path)
+
+    # Create features
 
 
 if __name__ == "__main__":
-    specify_CPU_run(sys.argv)
+    # Input metadata about job run
+    arg_computer, arg_user, arg_version, arg_print = specify_CPU_run(sys.argv)
+
+    main(arg_computer, arg_user, arg_version, arg_print)
+
+    # Run streamlit
+    print("\n\n=============================================================")
+    print("📌 At any time you can stop the server with Ctrl+c 📌")
+    print("=============================================================\n\n")
+
+    os.system("streamlit run dashboard.py")
