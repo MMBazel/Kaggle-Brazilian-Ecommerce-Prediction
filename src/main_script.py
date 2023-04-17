@@ -21,7 +21,6 @@ def unzip_files(full_path):
         "/data/raw/olist_products_dataset.csv.zip",
         "/data/raw/olist_orders_dataset.csv.zip",
         "/data/raw/olist_order_payments_dataset.csv.zip",
-        "/data/raw/Population_Brazilian_Cities_V2.csv.zip",
     ]
     for file in filenames:
         shutil.unpack_archive(f"{full_path}{file}", f"{full_path}/data/raw/")
