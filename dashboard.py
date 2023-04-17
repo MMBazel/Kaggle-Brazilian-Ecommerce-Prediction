@@ -142,23 +142,24 @@ with tab3:
 
     st.write('You selected:', option)
 
-    match option:
-        case 'Brazilian Holidays':
-            st.dataframe(brazilian_holidays_df)
-        case 'Brazilian Cities Population':
-            st.dataframe(brazilian_population_df)
-        case 'Orders':
-            st.dataframe(orders_df)
-        case 'Customers':
-            st.dataframe(customers_df)
-        case 'Order Items':
-            st.dataframe(order_items_df)
-        case 'Payments':
-            st.dataframe(payments_df)
-        case 'Products':
-            st.dataframe(products_df)
-        case 'Sellers':
-            st.dataframe(sellers_df)
+    if option == "Brazilian Holidays":
+        st.dataframe(brazilian_holidays_df)
+    elif option == "Brazilian Cities Population":
+        st.dataframe(brazilian_population_df)
+    elif "Orders":
+        st.dataframe(orders_df)
+    elif "Customers":
+        st.dataframe(customers_df)
+    elif "Order Items":
+        st.dataframe(order_items_df)
+    elif "Payments":
+        st.dataframe(payments_df)
+    elif "Products":
+        st.dataframe(products_df)
+    elif "Sellers":
+        st.dataframe(sellers_df)
+    else:
+        st.text("Select a dataset to preview")
 
 
 with tab4:
