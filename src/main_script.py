@@ -11,7 +11,20 @@ import os
 from time import time
 from time import perf_counter
 
+import shutil
 
+def unzip_files(full_path):
+    filenames = [
+        "/data/raw/olist_customers_dataset.csv.zip",
+        "/data/raw/olist_sellers_dataset.csv.zip",
+        "/data/raw/olist_order_items_dataset.csv.zip",
+        "/data/raw/olist_products_dataset.csv.zip",
+        "/data/raw/olist_orders_dataset.csv.zip",
+        "/data/raw/olist_order_payments_dataset.csv.zip",
+        "/data/raw/Population_Brazilian_Cities_V2.csv.zip",
+    ]
+    for file in filenames:
+        shutil.unpack_archive(f"{full_path}{file}", f"{full_path}/data/raw/")
 
 def read_files(full_path):
     customers_df = pl.scan_csv(
@@ -442,6 +455,15 @@ def main():
 
     
     print("\n\n----------------------------- 📁 Reading Files From Repository 📁 ----------------------------- \n\n")
+    
+    start_time = perf_counter()
+    unzip_files(full_path)
+    stop_time = perf_counter()
+    time_dict["Unzipping files"] = [
+        "Stage",
+        (stop_time - start_time) / 60,
+    ]
+    
     start_time = perf_counter()
     customers_df, sellers_df, ord_items_df, products_df, orders_df, payments_df, brazilian_holidays_df, brazilian_cities_population_df = read_files(full_path)
     stop_time = perf_counter()
